@@ -37,4 +37,3 @@ import Hex
 print(UIColor.white.hexString) // "#FFFFFF"
 print(UIColor.blue.hex) // 0x0000FF
 ```
-That's it. That's the whole thing.

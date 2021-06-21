@@ -4,7 +4,7 @@ Mix color using hex values in [SwiftUI](https://developer.apple.com/documentatio
 
 ## Requirements
 
-Targets [iOS](https://developer.apple.com/ios)/[iPadOS](https://developer.apple.com/ipad)/[tvOS ](https://developer.apple.com/tvos) 14, as well as [watchOS](https://developer.apple.com/watchos) 7 and [macOS](https://developer.apple.com/macos) 11. Written in [Swift](https://developer.apple.com/documentation/swift) 5.5 and requires [Xcode](https://developer.apple.com/xcode) 13 or newer to build.
+Targets [iOS](https://developer.apple.com/ios)/[iPadOS](https://developer.apple.com/ipados)/[tvOS ](https://developer.apple.com/tvos) 14, as well as [watchOS](https://developer.apple.com/watchos) 7 and [macOS](https://developer.apple.com/macos) 11. Written in [Swift](https://developer.apple.com/documentation/swift) 5.5 and requires [Xcode](https://developer.apple.com/xcode) 13 or newer to build.
 
 ## Example Usage
 

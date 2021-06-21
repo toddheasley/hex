@@ -37,18 +37,19 @@ extension IntTests {
     }
     
     func testComponentsInit() {
-        XCTAssertEqual(Int(components: nil), 0x000000)
-        XCTAssertEqual(Int(components: []), 0x000000)
-        XCTAssertEqual(Int(components: [0.0, 0.0, 0.0, 1.0]), 0x000000)
-        XCTAssertEqual(Int(components: [0.0, 1.0]), 0x000000)
-        XCTAssertEqual(Int(components: [0.2, 0.2, 0.2, 1.0]), 0x333333)
-        XCTAssertEqual(Int(components: [0.2, 1.0]), 0x333333)
-        XCTAssertEqual(Int(components: [0.8, 0.8, 0.8, 1.0]), 0xCCCCCC)
-        XCTAssertEqual(Int(components: [0.8, 1.0]), 0xCCCCCC)
-        XCTAssertEqual(Int(components: [1.0, 1.0, 1.0, 1.0]), 0xFFFFFF)
-        XCTAssertEqual(Int(components: [1.0, 1.0]), 0xFFFFFF)
-        XCTAssertEqual(Int(components: [1.0, 0.0, 0.0, 1.0]), 0xFF0000)
-        XCTAssertEqual(Int(components: [0.0, 1.0, 0.0, 1.0]), 0x00FF00)
-        XCTAssertEqual(Int(components: [0.0, 0.0, 1.0, 1.0]), 0x0000FF)
+        XCTAssertEqual(Int([0.0, 0.0, 0.0, 1.0]), 0x000000)
+        XCTAssertEqual(Int([0.0, 1.0]), 0x000000)
+        XCTAssertEqual(Int([0.2, 0.2, 0.2, 1.0]), 0x333333)
+        XCTAssertEqual(Int([0.2, 1.0]), 0x333333)
+        XCTAssertEqual(Int([0.8, 0.8, 0.8, 1.0]), 0xCCCCCC)
+        XCTAssertEqual(Int([0.8, 1.0]), 0xCCCCCC)
+        XCTAssertEqual(Int([1.0, 1.0, 1.0, 1.0]), 0xFFFFFF)
+        XCTAssertEqual(Int([1.0, 1.0]), 0xFFFFFF)
+        XCTAssertEqual(Int([1.0, 0.0, 0.0, 1.0]), 0xFF0000)
+        XCTAssertEqual(Int([0.0, 1.0, 0.0, 1.0]), 0x00FF00)
+        XCTAssertEqual(Int([0.0, 0.0, 1.0, 1.0]), 0x0000FF)
+        XCTAssertEqual(Int([]), 0x000000)
+        XCTAssertEqual(Int(nil), 0x000000)
+        XCTAssertEqual(Int(), 0x000000)
     }
 }

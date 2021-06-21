@@ -1,14 +1,13 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 
 import PackageDescription
 
-let package = Package(
-    name: "hex",
+let package = Package(name: "hex",
     platforms: [
-        .macOS(.v10_15),
-        .iOS(.v13),
-        .watchOS(.v6),
-        .tvOS(.v13)
+        .macOS(.v11),
+        .iOS(.v14),
+        .watchOS(.v7),
+        .tvOS(.v14)
     ],
     products: [
         .library(name: "Hex", targets: [
@@ -20,5 +19,4 @@ let package = Package(
         .testTarget(name: "HexTests", dependencies: [
             "Hex"
         ]),
-    ]
-)
+    ])

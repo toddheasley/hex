@@ -1,19 +1,18 @@
 import Foundation
-import CoreGraphics
 
 public typealias HexCodable = HexDecodable & HexEncodable
 
 public protocol HexDecodable {
-    init(hex: Int, alpha: CGFloat)
+    init(hex: Int, opacity: Double)
 }
 
 extension HexDecodable {
-    public init(hexString: String) {
-        self.init(hex: hexString.hex)
+    public init(hex string: String, opacity: Double = 1.0) {
+        self.init(hex: string.hex, opacity: opacity)
     }
     
     public init(hex: Int) {
-        self.init(hex: hex, alpha: 1.0)
+        self.init(hex: hex, opacity: 1.0)
     }
 }
 

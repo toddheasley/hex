@@ -9,15 +9,15 @@ final class UIColorTests: XCTestCase {
 
 extension UIColorTests {
     
-    // MARK: RGBHexDecodable
+    // MARK: HexDecodable
     func testHexInit() {
-        XCTAssertEqual(UIColor(hex: 0xFF3300, alpha: 1.0), UIColor(red: 1.0, green: 0.2, blue: 0.0, alpha: 1.0))
+        XCTAssertEqual(UIColor(hex: 0xFF3300, opacity: 0.5), UIColor(red: 1.0, green: 0.2, blue: 0.0, alpha: 0.5))
     }
 }
 
 extension UIColorTests {
     
-    // MARK: RGBHexEncodable
+    // MARK: HexEncodable
     func testHex() {
         XCTAssertEqual(UIColor(red: 1.0, green: 0.2, blue: 0.0, alpha: 1.0).hex, 0xFF3300)
     }

@@ -1,39 +1,27 @@
 # `Hex`
 
-Mix `UIColor` and `NSColor` with hex values
+Mix color using hex values in [SwiftUI](https://developer.apple.com/documentation/swiftui), [UIKit](https://developer.apple.com/documentation/uikit) and [AppKit.](https://developer.apple.com/documentation/appkit)
 
 ## Requirements
 
-Targets [iOS](https://developer.apple.com/ios)/[iPadOS](https://developer.apple.com/ipad)/[tvOS ](https://developer.apple.com/tvos) 13, as well as [watchOS](https://developer.apple.com/watchos) 6 and [macOS](https://developer.apple.com/macos) 10.15 Catalina. Written in [Swift](https://developer.apple.com/documentation/swift) 5.3 and requires [Xcode](https://developer.apple.com/xcode) 12 or newer to build.
+Targets [iOS](https://developer.apple.com/ios)/[iPadOS](https://developer.apple.com/ipad)/[tvOS ](https://developer.apple.com/tvos) 14, as well as [watchOS](https://developer.apple.com/watchos) 7 and [macOS](https://developer.apple.com/macos) 11. Written in [Swift](https://developer.apple.com/documentation/swift) 5.5 and requires [Xcode](https://developer.apple.com/xcode) 13 or newer to build.
 
 ## Example Usage
 
 ```swift
-import UIKit
+import SwiftUI
 import Hex
 
-let background: UIColor = UIColor(hexString: "FFFFFF")
-let foreground: UIColor = UIColor(hexString: "#ccc")
-let control: UIColor = UIColor(hex: 0x0000FF, alpha: 0.9)
-let label: UIColor = UIColor(hex: 0x333333)
+let _: [Color] = [
+    Color(hex: "FFFFFF"),
+    Color(hex: "#ccc", opacity: 0.9),
+    Color(hex: 0x0000CC)
+]
 ```
 
-```swift
-import Cocoa
-import Hex
-
-let background: NSColor = NSColor(hexString: "FFFFFF")
-let foreground: NSColor = NSColor(hexString: "#ccc")
-let control: NSColor = NSColor(hex: 0x0000FF, alpha: 0.9)
-let label: NSColor = NSColor(hex: 0x333333)
-```
-
-Plus, get the hex value of _any_ color:
+Plus, get the hex value of any color constructed from HSB, RGB or hex values:
 
 ```swift
-import UIKit
-import Hex
-
-print(UIColor.white.hexString) // "#FFFFFF"
-print(UIColor.blue.hex) // 0x0000FF
+print(Color(red: 0.0, green: 0.0, blue: 0.8).hex) // 0x0000CC
+print(Color(white: 0.8).hexString) // "#CCCCCC"
 ```

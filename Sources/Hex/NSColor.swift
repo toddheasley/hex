@@ -1,4 +1,4 @@
-#if os(macOS)
+#if canImport(Cocoa)
 import Cocoa
 
 extension NSColor: HexCodable {

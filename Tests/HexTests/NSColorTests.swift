@@ -1,4 +1,4 @@
-#if os(macOS)
+#if canImport(Cocoa)
 import XCTest
 import Cocoa
 @testable import Hex

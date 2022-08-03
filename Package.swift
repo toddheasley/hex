@@ -2,21 +2,18 @@
 
 import PackageDescription
 
-let package = Package(name: "hex",
-    platforms: [
+let package = Package(name: "hex", platforms: [
         .macOS(.v11),
         .iOS(.v14),
         .watchOS(.v7),
         .tvOS(.v14)
-    ],
-    products: [
+    ], products: [
         .library(name: "Hex", targets: [
             "Hex"
-        ]),
-    ],
-    targets: [
+        ])
+    ], targets: [
         .target(name: "Hex", dependencies: []),
         .testTarget(name: "HexTests", dependencies: [
             "Hex"
-        ]),
+        ])
     ])
